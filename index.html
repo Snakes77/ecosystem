@@ -10,70 +10,94 @@
             --primary-color: #2c3e50;
             --secondary-color: #34495e;
             --accent-color: #3498db;
-            --text-light: #ecf0f1;
-            --text-dark: #2c3e50;
         }
-
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
             background-color: #f8f9fa;
         }
-
         .header {
             background-color: var(--primary-color);
-            color: var(--text-light);
-            text-align: center;
+            color: white;
             padding: 2rem 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
         }
-
-        .main-content {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        .dashboard-section {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background-color: white;
+        .dashboard-card {
+            background: white;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            padding: 20px;
         }
-
-        .section-title {
-            color: var(--text-dark);
-            margin-bottom: 1rem;
+        .stats-card {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>Logistics Ecosystem Dashboard</h1>
-        <p>Comprehensive industry insights and analytics</p>
+        <p>Your central hub for logistics insights</p>
     </div>
 
-    <div class="main-content">
-        <div class="dashboard-section">
-            <h2 class="section-title">Industry Updates</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Latest News</h5>
-                            <p class="card-text">Stay updated with the latest industry developments</p>
+    <div class="container mt-4">
+        <!-- Market Overview -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="dashboard-card">
+                    <h2>Market Overview</h2>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="stats-card">
+                                <h3>250+</h3>
+                                <p>Active Jobs</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stats-card">
+                                <h3>15</h3>
+                                <p>Top Companies</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stats-card">
+                                <h3>50+</h3>
+                                <p>Industry Updates</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stats-card">
+                                <h3>£45K</h3>
+                                <p>Avg. Salary</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Market Trends</h5>
-                            <p class="card-text">Track current market trends and analysis</p>
-                        </div>
+            </div>
+        </div>
+
+        <!-- Latest News -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="dashboard-card">
+                    <h2>Latest News</h2>
+                    <div id="news-container" class="row">
+                        <p>Loading latest industry news...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Job Listings -->
+        <div class="row">
+            <div class="col-12">
+                <div class="dashboard-card">
+                    <h2>Job Opportunities</h2>
+                    <div id="jobs-container">
+                        <p>Loading job listings...</p>
                     </div>
                 </div>
             </div>
